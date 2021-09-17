@@ -9,11 +9,13 @@
         else{
             return i *silnia(i-1);
         }
+        alert(i)
     }
+    
     </script>
     </head>
     <body>
-        <button input type="button" onclick="silnia">button</button>
-        <input type="number" value="oblicz"
+        <input name="user">
+        <button type="button" value="licz" onclick="silnia(this.user.value)">button</button>
     </body>
     </html>
