@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head></head>
+<body>
+    <script>
+       function drab(d,x)
+       {
+       var d_licz = parseFloat(d);
+       var x_licz = parseFloat(x);
+
+       var pitagoras = Math.pow(d_licz,2) + Math.pow(x_licz,2);
+       var pitagoras1 = Math.sqrt(pitagoras);
+
+       document.getElementsByName('drabina')[0].value = pitagoras1;
+       }
+    </script>
+    <form name="fomulaz" onsubmit="drab(this.liczba1.value, this.liczba2.value); return false">
+        Odleglosc od drabiny i kat<br>
+
+        Podaj d: <input type="number" name="liczba1"><br>
+        Podaj x: <input type="number" name="liczba2"><br>
+
+        <input type="submit" value="oblicz"><br>
+        Drabina: <input name="drabina">
+
+
+</body>
