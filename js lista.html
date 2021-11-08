@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+
+    <script>
+        function lista()
+        {
+            var mle = document.getElementById("mleko");
+            var chl = document.getElementById("chleb");
+            var mas = document.getElementById("maslo");
+            var wod = document.getElementById("woda");
+            var jaj = document.getElementById("jajka");
+            var so = document.getElementById("sok");
+            var prz = document.getElementById("przecena");
+
+            var cena=0;
+            var zakupy="twoje prodkty: ";
+
+            if(mle.checked)
+            {
+                zakupy+="mleko, ";
+                cena += 4;
+            }
+            if(chl.checked)
+            {
+                zakupy+="chleb, ";
+                cena += 2,50;
+            }
+            if(mas.checked)
+            {
+                zakupy+="maslo, ";
+                cena += 3,50;
+            }
+            if(wod.checked)
+            {
+                zakupy+="woda, ";
+                cena += 2;
+            }
+            if(jaj.checked)
+            {
+                zakupy+="jajka, ";
+                cena += 10;
+            }
+            if(so.checked)
+            {
+                zakupy+="sok, ";
+                cena += 5;
+            }
+            if(prz.checked)
+            {
+                cena *= 0.6;
+            }
+            wynik.innerHTML = zakupy
+            wynik2.innerHTML = "cena:" + parseFloat(cena).toFixed(2) + "zł"
+        }
+    </script>
+</head>
+<body>
+    <input type="checkbox" id="mleko" name="mleko">Mleko 4zł<br>
+    <input type="checkbox" id="chleb" name="chleb">Chleb 2,50zł<br>
+    <input type="checkbox" id="maslo" name="maslo">Masło 3,50zł<br>
+    <input type="checkbox" id="woda" name="woda">Woda 1L 2zł<br>
+    <input type="checkbox" id="jajka" name="jajka">Jajka 10zł<br>
+    <input type="checkbox" id="sok" name="sok">Sok 5zł<br>
+    <input type="checkbox" id="przecena" name="przecena">zniżka 40%<br>
+    <input type="button" name="zapłać" onclick="lista()">Zapłać<br>
+
+    <p id="wynik"></p>
+    <p id="wynik2"></p>
+</body>
+</html>
